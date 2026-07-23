@@ -1,0 +1,57 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ['"Playfair Display"', 'serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      colors: {
+        coffee: {
+          50: '#faf6f1',
+          100: '#f2e8dc',
+          200: '#e4d0b8',
+          300: '#d2b189',
+          400: '#bf915f',
+          500: '#a87642',
+          600: '#8c5d32',
+          700: '#6f4628',
+          800: '#523420',
+          900: '#3a2517',
+          950: '#241409',
+        },
+        cream: {
+          50: '#fdfcfa',
+          100: '#faf7f2',
+          200: '#f4ece0',
+          300: '#ebdcc6',
+        },
+        accent: {
+          500: '#c2410c',
+          600: '#9a3412',
+        },
+      },
+      keyframes: {
+        'fade-up': {
+          '0%': { opacity: '0', transform: 'translateY(24px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        'slow-zoom': {
+          '0%': { transform: 'scale(1)' },
+          '100%': { transform: 'scale(1.12)' },
+        },
+      },
+      animation: {
+        'fade-up': 'fade-up 0.8s ease-out forwards',
+        'fade-in': 'fade-in 1s ease-out forwards',
+        'slow-zoom': 'slow-zoom 18s ease-in-out infinite alternate',
+      },
+    },
+  },
+  plugins: [],
+};
